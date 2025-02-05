@@ -1,4 +1,4 @@
-.price .items {
+/* .price .items {
   padding: 40px;
   text-align: center;
 }
@@ -45,3 +45,115 @@
 }
 
 /*--------------faq-------------*/
+ */
+
+
+/*------------ Price Section -------------*/
+.price .items {
+  padding: 40px;
+  text-align: center;
+  background-color: #fff; /* Background for better separation */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+  border-radius: 10px; /* Rounded corners */
+  transition: 0.3s ease-in-out; /* Smooth transition on hover */
+}
+
+.price .items:hover {
+  transform: translateY(-10px); /* Hover effect */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+.price h1 {
+  font-size: 50px;
+  margin: 20px 0;
+  color: #1eb2a6;
+}
+
+.price h1 span {
+  font-size: 20px;
+  margin-right: 5px;
+  color: #000;
+}
+
+.price p {
+  color: grey;
+  margin: 40px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .price .items {
+    padding: 30px;
+  }
+
+  .price h1 {
+    font-size: 40px;
+  }
+
+  .price p {
+    margin: 20px 0;
+  }
+}
+
+/*------------ FAQ Section -------------*/
+.faq .container {
+  max-width: 70%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.faq .box {
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  overflow: hidden; /* Ensures the accordion expands/collapses neatly */
+}
+
+.faq button {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px 20px;
+  background-color: #f9f9f9;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faq h2 {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.faq p {
+  padding: 20px;
+  color: grey;
+  display: none; /* Initially hidden for accordion effect */
+}
+
+.faq button:hover {
+  background-color: #1eb2a6;
+  color: #fff;
+}
+
+.faq .accordion.active + p {
+  display: block;
+  transition: max-height 0.3s ease-in-out;
+}
+
+/*---------- Mobile-Responsive FAQ Section ----------*/
+@media screen and (max-width: 768px) {
+  .faq .container {
+    max-width: 90%;
+  }
+
+  .faq h2 {
+    font-size: 16px;
+  }
+
+  .faq button {
+    padding: 12px 15px;
+  }
+}
