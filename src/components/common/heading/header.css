@@ -1,4 +1,4 @@
-.head {
+/* .head {
     padding: 20px 0;
     color: #fff;
 }
@@ -93,5 +93,118 @@ header ul li a:hover {
         left: 0;
         width: 100%;
         background-color: #1eb2a6;
+    }
+} */
+
+
+/* Header Section */
+.head {
+    padding: 15px 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.head .icon {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+/* Navigation */
+header {
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 30px;
+    padding: 10px 0;
+    position: relative;
+}
+
+header .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    padding: 15px 20px;
+    margin: 0;
+}
+
+header ul li {
+    margin-right: 30px;
+}
+
+header ul li a {
+    color: #fff;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+header ul li a:hover {
+    color: #1eb2a6;
+}
+
+.start {
+    background-color: #1eb2a6;
+    padding: 20px 50px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Toggle Button */
+.toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+/* Mobile Navigation */
+@media screen and (max-width: 768px) {
+    .start {
+        clip-path: none;
+    }
+
+    header {
+        margin: 0;
+        background-color: #1eb2a6;
+        padding: 10px 20px;
+    }
+
+    header ul {
+        display: none;
+        flex-direction: column;
+        background-color: #1eb2a6;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    header ul li {
+        margin: 15px 0;
+    }
+
+    .toggle {
+        display: block;
+    }
+
+    .mobile-nav {
+        display: flex !important;
     }
 }
